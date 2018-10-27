@@ -1,0 +1,51 @@
+@import '~src/variables';
+@import '~src/mixins';
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: $mainBckg;
+    transition: all 0.4s ease;
+    &::before{
+        content: '<body>';
+        @include codeSimulation; 
+        position: relative;
+        top: 3.5rem;
+        left: 3rem;
+    }
+    &::after{
+        content: '</body>';
+        @include codeSimulation; 
+        position: $abs;
+        bottom: 15%;
+        left: 3rem;
+    }
+    .titulo{
+        width: 95%;
+        @include vCenter;
+    }
+    h1{
+        color: $cleanWhite;
+        font-family: $title1;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+    span{
+        font-family: $title2;
+        text-transform: capitalize;        
+    }
+    .sub_heading{
+        text-align: center;
+        font-family: $title1;
+        font-weight: lighter;
+        font-size: 0.8rem;
+        color: $cleanWhite;
+        position: $abs;
+        top: 155%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+} 
