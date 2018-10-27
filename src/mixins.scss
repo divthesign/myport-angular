@@ -1,0 +1,28 @@
+@mixin codeSimulation{
+    font-family: $title2;
+    font-size: 0.8rem;
+    color: $codeGrey;
+}
+@mixin vCenter{
+    position: $abs;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin btn{
+    margin-top: 1rem;
+    width: 8.5rem;
+    padding: 0.5rem 0;
+    background: $lightTurquoise;
+    border: none;
+    font-family: $title1;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    outline: inherit;
+    cursor: pointer;
+    &:hover{
+        background: $cleanWhite;
+        color: $lightTurquoise; 
+    }
+}
