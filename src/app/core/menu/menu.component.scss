@@ -1,0 +1,104 @@
+@import '~src/variables';
+@import '~src/mixins';
+.abrirMenu{
+    display: inline-block;
+    width: 3rem;
+    height: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    margin-top: .5rem;
+    margin-right: 1.5rem;
+    top: 1rem;
+    .bar1{
+        position: absolute;
+        width: 100%;
+        height: 15%;            
+        background: $strongPink; 
+        transform: translate(-1rem);
+        transition: .2s ease;
+    }
+    .bar2{
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        background: $strongPink;
+        margin-top: 1.1rem;
+        transform: translate(1rem);
+        transition: .2s ease;
+    }
+    .bar3{
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        background: $strongPink;
+        margin-top: 2.2rem;
+        transform: translate(-1rem);
+        transition: .2s ease;
+    }
+}
+.change{
+    .bar1{
+        transform: translate(0);
+    }
+    .bar2{
+        transform: translate(0);
+    }
+    .bar3{
+        transform: translate(0);
+    }
+}
+.menu-hide{
+    display: none;
+}
+nav{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: $navGrey;
+    position: $abs;
+    top: 0;
+    z-index: 20;
+    padding-left: 1rem;
+    padding-top: 3.5rem;
+    animation: entradaMenu 0.4s ease 1;
+    @keyframes entradaMenu{
+        0%{
+            opacity: 0;
+            right: 100%;
+        }
+        100%{
+            opacity: 1;
+            right: 0;
+        }
+    }
+}
+li{
+    padding-top: 2rem ;
+}
+a{
+    text-decoration: none;
+    color: $plainBlack;
+    font-family: $title1;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    &:hover{
+        color: $cleanWhite;
+    }
+}
+.text_menu{
+    margin-top: 4rem;
+    p{
+        font-family: $title1;
+        font-weight: 100;
+        width: 90%;
+        font-size: 1rem;
+        color: $lightTurquoise;
+        line-height: 1.6;
+    }
+    button{
+        @include btn; 
+    }
+}
