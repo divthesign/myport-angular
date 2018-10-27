@@ -1,0 +1,30 @@
+@import '~src/variables';
+@import '~src/mixins';
+.logo_externo{
+    width: 4.2rem;
+    height: 4.2rem;
+    background: linear-gradient(to right, $strongPink, $lightTurquoise); 
+    @include vCenter;
+    &::before{
+        content: '<div>';
+        @include codeSimulation; 
+        position: $abs;
+        top: -0.5rem;
+        left: -2.5rem;
+    }
+    &::after{
+        content: '</div>';
+        @include codeSimulation; 
+        position: $abs;
+        bottom: -0.5rem;
+        left: 105%;
+    }
+    .logo_interno{
+        width: 97%;
+        height: 97%;
+        background: linear-gradient(to right, $strongPink, $mainBckg); 
+        position: relative;
+        top: 1.5%;
+        left: 1.5%;
+    } 
+}
