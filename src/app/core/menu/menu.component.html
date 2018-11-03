@@ -1,11 +1,11 @@
 <div class="nav">
-    <div class="abrirMenu change">
+    <div (click)="valor1 = true" class="abrirMenu change">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
         <div class="main-container">
-            <nav class="menu-hide menu-show">
+            <nav *ngIf="valor1"  class="menu-hide menu-show">
                 <ul>
                     <li> <a class="link__about" href="#about">sobre mi</a></li>
                     <li> <a id="link-port"href="#scroll-port">Portfolio</a></li>
